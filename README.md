@@ -1,4 +1,3 @@
-### Overview 
 Kali ini saya akan membuat sebuah case page dimana saya akan mengotak otak sebuah infrastructure yang sudah saya buat sebelumnya,nah kali ini saya 
 akan mengotak atik infra dari pull based yang sudah saya buat dan sedikit mengubahnya,jika di projek utama infra pull based semua cluster memiliki 
 satu argocd bisa di sebut bahwa infra itu stand alone argocd nah tapi untuk yang kali ini hanya akan ada satu argocd di dua cluster dan infra ini
@@ -18,4 +17,32 @@ lama langsung saja masuk ke pembahasannya
 
 ![asciadbv](/asset/hb.png)
 
+### Structure Folder
 
+Untuk structure folder akan terdiri dari dua folder yang pertama untuk terraform 
+
+```
+terraform-setup/
+├── .terraform/
+├── compute.tf
+├── main.tf
+├── prep-vm.tf
+├── prep-2.tf
+├── compute-cluster-2.tf
+```
+
+dan yang kedua yaitu ansible
+
+```
+k8s/
+├── ansible.cfg
+├── inventory
+├── playbook-allow-port.yaml
+├── playbook-ip.yaml
+├── playbook-join.yaml
+├── playbook-kubernetes.yaml
+├── playbook-pkg.yaml
+├── playbook-swap.yaml
+├── playbook-install-terraform-bare-metal.yaml
+├── playbook-config.yaml
+```
