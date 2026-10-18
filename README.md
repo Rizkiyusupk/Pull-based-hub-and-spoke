@@ -16,6 +16,6 @@ lama langsung saja masuk ke pembahasannya
 | **Jenkins**                 | 7 cores | 7GB  | 240GB   |                Wlan                 |
 
 
-![asciadbv](/asset/Neon GitOps Hub-and-Spoke Architecture Workflow.png)
+![asciadbv](/asset/hb.png)
 
 
