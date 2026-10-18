@@ -1,5 +1,5 @@
 - name: adding diffrent ip for node
-  hosts: masters,workers
+  hosts: your cluster ip
   become: yes
 
   tasks:
