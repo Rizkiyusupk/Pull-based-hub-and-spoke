@@ -6,7 +6,7 @@
       ansible.builtin.command: kubeadm config images pull
       register: pull_output
     - name: init
-      ansible.builtin.command: kubeadm init --apiserver-advertise-address=your cluster ip --pod-network-cidr=10.244.0.0/16 --node-name=k8s-master --apiserver-cert-extra-sans=127.0.0.1,laptop-1-ip
+      ansible.builtin.command: kubeadm init --apiserver-advertise-address=your master ip --pod-network-cidr=10.244.0.0/16 --node-name=k8s-master --apiserver-cert-extra-sans=127.0.0.1,laptop-1-ip
       register: kube_output
       async: 600
       poll: 30
@@ -25,4 +25,4 @@
   become: yes
   tasks:
     - name: join cluster
-      ansible.builtin.shell: "{{ hostvars[groups['masters-cluster-2'][0]]['join_command'] }}"
+      ansible.builtin.shell: "{{ hostvars[groups['name of your master'][0]]['join_command'] }}"
