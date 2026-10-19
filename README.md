@@ -43,8 +43,8 @@ k8s/
 ├── playbook-kubernetes.yaml
 ├── playbook-pkg.yaml
 ├── playbook-swap.yaml
-├── playbook-install-terraform-bare-metal.yaml
 ├── playbook-config.yaml
+├── argocd.yaml
 ```
 
 ### Reasoning
